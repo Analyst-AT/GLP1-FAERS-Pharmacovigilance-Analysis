@@ -12,6 +12,26 @@ This project conducts a **retrospective pharmacovigilance analysis of FAERS repo
 
 ---
 
+## Project Highlights
+
+• Analyzed **250,449 FAERS adverse event reports** from 2025 (Q1–Q4)
+
+• Identified **124,062 serious adverse event reports** associated with GLP-1 receptor agonists
+
+• Conducted **retrospective pharmacovigilance analysis** using the FDA FAERS database
+
+• Identified **top adverse reactions**, including nausea, vomiting, and impaired gastric emptying
+
+• Examined **serious clinical outcomes** such as hospitalization, life-threatening events, and death
+
+• Compared **adverse event patterns across GLP-1 medications** including semaglutide, tirzepatide, dulaglutide, and liraglutide
+
+• Produced **7 data visualizations** to illustrate adverse event distributions and drug-specific reporting patterns
+
+• Performed the full workflow using **R, ggplot2, and FAERS public-use data**
+
+---
+
 # Study Aim
 
 To describe and compare **serious adverse events reported for GLP-1 receptor agonists** in the FAERS database and explore whether **drug type and report characteristics** are associated with serious outcomes.
