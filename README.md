@@ -1,94 +1,92 @@
-GLP-1 Pharmacovigilance Analysis Using FDA FAERS Data
-Overview
+# GLP-1 Pharmacovigilance Analysis Using FDA FAERS Data
 
-This project investigates serious adverse events associated with GLP-1 receptor agonists using the FDA Adverse Event Reporting System (FAERS) database.
+## Overview
 
-GLP-1 receptor agonists such as semaglutide, tirzepatide, and dulaglutide are widely used for the treatment of type 2 diabetes and obesity. With the rapid expansion in their use, understanding their real-world safety profile has become increasingly important.
+This project investigates **serious adverse events associated with GLP-1 receptor agonists** using the **FDA Adverse Event Reporting System (FAERS)** database.
+
+GLP-1 receptor agonists such as **semaglutide, tirzepatide, and dulaglutide** are widely used for the treatment of **type 2 diabetes and obesity**. With the rapid expansion in their use, understanding their real-world safety profile has become increasingly important.
 
 Using FAERS data from 2025, this project examines patterns of serious adverse outcomes and commonly reported adverse reactions associated with GLP-1 medications.
 
-Dataset
+## Dataset
 
-Source: FDA Adverse Event Reporting System (FAERS)
+**Source:** FDA Adverse Event Reporting System (FAERS)
 
 FAERS is a spontaneous reporting database used by the FDA for post-marketing pharmacovigilance and drug safety monitoring.
 
 Reports are submitted by:
 
-Healthcare professionals
-
-Pharmaceutical manufacturers
-
-Patients and consumers
+- Healthcare professionals
+- Pharmaceutical manufacturers
+- Patients and consumers
 
 Because FAERS contains millions of adverse event reports, it is widely used in drug safety research and epidemiologic studies.
 
-Data Summary
-Metric	Value
-Total FAERS reports analyzed	250,449
-Serious adverse event reports	124,062
-Non-serious reports	126,387
-Most reported GLP-1 drug	Mounjaro
-Second most reported drug	Ozempic
-Most common adverse reaction	Incorrect dose administered
-Second most common reaction	Nausea
-Most common serious outcome	Other serious outcome
-Second most common serious outcome	Hospitalization
+## Data Summary
+
+| Metric | Value |
+|--------|-------|
+| Total FAERS reports analyzed | 250,449 |
+| Serious adverse event reports | 124,062 |
+| Non-serious reports | 126,387 |
+| Most reported GLP-1 drug | Mounjaro |
+| Second most reported drug | Ozempic |
+| Most common adverse reaction | Incorrect dose administered |
+| Second most common reaction | Nausea |
+| Most common serious outcome | Other serious outcome |
+| Second most common serious outcome | Hospitalization |
 
 These values summarize aggregated adverse event reports involving GLP-1 receptor agonists in the FAERS dataset.
 
-Methods
+## Methods
 
-The analysis was conducted using R.
+The analysis was conducted using **R**.
 
 Main steps included:
 
-Importing and cleaning FAERS datasets
+- Importing and cleaning FAERS datasets
+- Filtering reports involving **GLP-1 receptor agonists**
+- Removing duplicate case reports
+- Aggregating adverse events using preferred terms (PT)
+- Summarizing serious outcomes
+- Visualizing patterns using **ggplot2**
 
-Filtering reports involving GLP-1 receptor agonists
+## Data Visualizations
 
-Removing duplicate case reports
+### Most Reported GLP-1 Drugs in FAERS
 
-Aggregating adverse events using preferred terms (PT)
+![Most Reported Drugs](figures/figure4_most_reported.png)
 
-Summarizing serious outcomes
+### Serious Adverse Outcome Distribution
 
-Visualizing patterns using ggplot2
+![Serious Outcomes](figures/figure1_serious_outcomes.png)
 
-Data Visualizations
-Most Reported GLP-1 Drugs in FAERS
+### Serious Outcomes Associated with GLP-1 Reports
 
-This figure shows the distribution of adverse event reports across GLP-1 medications.
+![Outcome Associated](figures/figure5_outcome_associated.png)
 
-Serious Adverse Outcome Distribution
+### Distribution of Serious Outcomes by Drug
 
-This visualization summarizes the types of serious clinical outcomes reported in FAERS.
+![Outcomes by Drug](figures/figure2_serious_outcomes_by_drug.png)
 
-Serious Outcomes Associated with GLP-1 Reports
+### Top 25 Adverse Reactions
 
-This figure further illustrates the distribution of severe outcomes reported for GLP-1 medications.
+![Top Reactions](figures/figure3_top25_adverse_reactions.png)
 
-Distribution of Serious Outcomes by Drug
+### Top 20 Adverse Events
 
-This stacked bar chart compares serious outcome reporting patterns across GLP-1 drugs.
+![Top Events](figures/figure6_top20_adverse_events.png)
 
-Top 25 Adverse Reactions
+### Percentage Distribution of Serious Outcomes by Drug
 
-This visualization highlights the most frequently reported adverse reactions among serious GLP-1 reports.
+![Outcome Percentage](figures/figure7_outcome_percentage_by_drug.png)
 
-Top 20 Adverse Events
+## Repository Structure
 
-This figure summarizes the most common adverse events associated with GLP-1 drugs.
-
-Percentage Distribution of Serious Outcomes by Drug
-
-This figure compares the proportion of serious outcomes across different GLP-1 medications.
-
-Repository Structure
+```text
 GLP1-FAERS-Pharmacovigilance-Analysis
 
 README.md
-
 GLP1_FAERS_Pharmacovigilance_Report.pdf
 glp1_faers_analysis.R
 GLP1_FAERS_tables.xlsx
@@ -101,6 +99,8 @@ figures/
    figure5_outcome_associated.png
    figure6_top20_adverse_events.png
    figure7_outcome_percentage_by_drug.png
+
+
 Limitations
 
 FAERS is a spontaneous reporting system and has several limitations:
