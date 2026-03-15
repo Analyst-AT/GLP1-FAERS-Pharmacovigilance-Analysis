@@ -207,7 +207,7 @@ Therefore, results should be interpreted as **reporting patterns rather than tru
 
 **Asmita Thapa**  
 Master of Public Health (MPH)  
-Epidemiology & Biostatistics
+Biostatistics & Epidemiology
 
 ---
 
